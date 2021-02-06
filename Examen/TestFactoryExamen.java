@@ -8,8 +8,8 @@ public class TestFactoryExamen {
     @Factory
     public Object[] prueba_netflix(){
         return new Object[]{
-                new TestSolofactory("ledier@gmail.com"),
-                new TestSolofactory("carlos@gmail.com")
+                new prueba_netflix("ledier@gmail.com"),
+                new prueba_netflix("carlos@gmail.com")
         };
     }
 }

@@ -15,7 +15,10 @@ import java.util.concurrent.TimeUnit;
 public class prueba_netflix {
 
     WebDriver driver;
-
+    String email="";
+    public prueba_netflix(String mail){
+        email = mail;
+    }
     @BeforeMethod
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
@@ -78,9 +81,9 @@ public class prueba_netflix {
     }
 
     @Test ( priority = 4, dataProvider = "mails", dataProviderClass = DataGeneratorExamen.class)
-    public void dataProviderEmailTest(String correo){
+    public void dataProviderEmailTest(String email){
 
-        driver.findElement(By.id("id_email_hero_fuji")).sendKeys(correo);
+        driver.findElement(By.id("id_email_hero_fuji")).sendKeys(email);
         driver.findElement(By.xpath("//*[@type='submit']")).click();
     }
 
